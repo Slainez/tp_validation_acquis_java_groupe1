@@ -13,6 +13,7 @@ public class TP2 {
     }
 
     static String upperWord(String chaine) {
+        // enlève les espaces multiples
         chaine = chaine.replaceAll(" +", " ");
         String[] chaineString = chaine.split(" ");
         for (int i = 0; i < chaineString.length; i++) {
