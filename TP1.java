@@ -18,21 +18,17 @@ public class TP1 {
     static int[] rechercheMinMax(int[] tableau) {
 
         int[] indices = new int[2];
-        int max = 0;
-        int min = 0;
-        int indexMax = 0;
-        int indexMin = 0;
+        int max = tableau[0];
+        int min = tableau[0];
         for (int i = 0; i < tableau.length; i++) {
             if (tableau[i] > max) {
                 max = tableau[i];
-                indexMax = i;
             } else if (tableau[i] < min) {
                 min = tableau[i];
-                indexMin = i;
             }
         }
-        indices[0] = indexMax;
-        indices[1] = indexMin;
+        indices[0] = max;
+        indices[1] = min;
         return indices;
     }
 
@@ -41,9 +37,9 @@ public class TP1 {
         for (int i = 0; i < tableau.length; i++) {
             stringTab += Integer.toString(tableau[i]);
             if (i == resultats[0]) {
-                stringTab += "(PP)";
+                stringTab += "(PG)";
             } else if (i == resultats[1]) {
-                stringTab += "PG";
+                stringTab += "(PP)";
             }
             stringTab += i== tableau.length -1 ? "" : ",";
         }
