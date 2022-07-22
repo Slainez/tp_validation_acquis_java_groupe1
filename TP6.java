@@ -9,7 +9,7 @@ public class TP6 {
 
         int[] tableauInitial = {1, 2, 3, 4, 5};
         Scanner input = new Scanner(System.in);
-        System.out.println("Entrer la taille de découpage: ");
+        System.out.print("Entrer la taille de découpage: ");
         int taille = input.nextInt();
 
         int[][] tableauDecoupe = decoupage(tableauInitial, taille);
@@ -20,7 +20,7 @@ public class TP6 {
 
     static int[][] decoupage(int[] tableau, int taille) {
 
-        int tailleTableaudecoupage = (tableau.length / taille) + 1;
+        int tailleTableaudecoupage = (int)Math.ceil ((double)tableau.length / taille);
         int[][] tableauDecoupe = new int[tailleTableaudecoupage][];
 
         int indiceTableauDecoupe = 0;
