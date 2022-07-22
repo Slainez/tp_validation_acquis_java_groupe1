@@ -45,7 +45,7 @@ public class TestBibliotheque {
         bibli.afficherAuteur(true);
 
         System.out.println("liste des exemplaires de comte de monte Cristo en anglais");
-        ArrayList<Exemplaire> listeEx = bibli.listerExemplaires(oeuvre3, "français");
+        ArrayList<Exemplaire> listeEx = bibli.listerExemplaires(oeuvre5, "anglais");
 
         for (Exemplaire exemplaire: listeEx) {
             System.out.println(exemplaire.afficher());
